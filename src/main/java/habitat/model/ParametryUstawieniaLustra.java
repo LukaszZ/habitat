@@ -22,6 +22,11 @@ public class ParametryUstawieniaLustra {
 	public int getKoszt() {
 		return koszt;
 	}
+
+	@Override
+	public String toString() {
+		return ""+modyfikacjaNaslonecznienia;
+	}
 	
 	
 }

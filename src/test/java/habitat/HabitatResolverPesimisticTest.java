@@ -32,7 +32,7 @@ public class HabitatResolverPesimisticTest {
 		//then exception
 	}
 	
-	@Parameters
+	@Parameters(name = "{index}: {0}")
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][]{
 				//habitat 1

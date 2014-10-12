@@ -19,7 +19,7 @@ public class HabitatResolver {
 			
 			WynikWyliczenia wynikWyliczenia = new WynikWyliczenia(param);
 			
-			List<ParametryUstawieniaLustra> copyOfParametry = habitat.geCopyOftParametry();
+			List<ParametryUstawieniaLustra> copyOfParametry = habitat.getCopyOfParametry();
 			copyOfParametry.remove(param);
 			
 			WynikWyliczenia nowyWynik = wyliczKosztUstawienia(wynikWyliczenia, copyOfParametry);

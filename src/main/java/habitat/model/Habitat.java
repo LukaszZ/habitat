@@ -15,11 +15,17 @@ public class Habitat {
 		return parametry;
 	}
 
-	public List<ParametryUstawieniaLustra> geCopyOftParametry() {
+	public List<ParametryUstawieniaLustra> getCopyOfParametry() {
 		return new ArrayList<ParametryUstawieniaLustra>(parametry);
 	}
 	
 	public int getLiczbaMiast() {
 		return parametry.size();
 	}
+
+	@Override
+	public String toString() {
+		return "Habitat " + parametry;
+	}
+	
 }

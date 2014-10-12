@@ -37,7 +37,7 @@ public class HabitatResolverOptimisticTest {
 		assertThat(kosztUstawienia).isEqualTo(oczekiwanykoszt);
 	}
 	
-	@Parameters
+	@Parameters(name = "{index}: {0}  minimalnyKoszt -> {1}")
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][]{
 				//habitat 1
