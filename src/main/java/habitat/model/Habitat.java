@@ -1,31 +1,35 @@
 package habitat.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Definicja Habitatu.
+ * @author lzola
+ *
+ */
 public class Habitat {
 
-	private List<ParametryUstawieniaLustra> parametry;
+	private List<ParametryUstawieniaLustra> minimiasta;
 
-	public Habitat(List<ParametryUstawieniaLustra> parametry) {
-		this.parametry = parametry;
+	public Habitat(List<ParametryUstawieniaLustra> minimiasta) {
+		this.minimiasta = minimiasta;
 	}
 
-	public List<ParametryUstawieniaLustra> getParametry() {
-		return parametry;
+	public List<ParametryUstawieniaLustra> getMinimiasta() {
+		return minimiasta;
 	}
 
-	public List<ParametryUstawieniaLustra> getCopyOfParametry() {
-		return new ArrayList<ParametryUstawieniaLustra>(parametry);
+	public ParametryUstawieniaLustra getMinimiasto(int i) {
+		return minimiasta.get(i);
 	}
-	
-	public int getLiczbaMiast() {
-		return parametry.size();
+
+	public int getLiczbaMinimiast() {
+		return minimiasta.size();
 	}
 
 	@Override
 	public String toString() {
-		return "Habitat " + parametry;
+		return "Habitat " + minimiasta;
 	}
 	
 }

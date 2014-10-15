@@ -28,7 +28,7 @@ public class HabitatResolverOptimisticTest {
 	@Test
 	public void powinienWyznaczycOptymalnyKoszt() throws DepresjaException {
 		//given
-		HabitatResolver serviceUnderTest = new HabitatResolver();
+		HabitatResolver serviceUnderTest = new DefaultHabitatResolver();
 
 		//when
 		int kosztUstawienia = serviceUnderTest.wyliczKosztOptymalnegoUstawieniaLuster(habitat);
@@ -57,7 +57,29 @@ public class HabitatResolverOptimisticTest {
 				.minimiasto().modyfikujeNaslonecznieni(10)	.kosztUstawienia(9)
 				.minimiasto().modyfikujeNaslonecznieni(7)	.kosztUstawienia(3)
 				
-				.build(), 8}
+				.build(), 8},
+				
+				//habitat 3
+				{new HabitatBuilder()
+				
+				.minimiasto().modyfikujeNaslonecznieni(7)	.kosztUstawienia(2)
+				.minimiasto().modyfikujeNaslonecznieni(3)	.kosztUstawienia(3)
+				.minimiasto().modyfikujeNaslonecznieni(10)	.kosztUstawienia(9)
+				.minimiasto().modyfikujeNaslonecznieni(7)	.kosztUstawienia(3)
+				.minimiasto().modyfikujeNaslonecznieni(-7)	.kosztUstawienia(3)				
+				
+				.build(), 5},
+				
+				//habitat 4
+				{new HabitatBuilder()
+				
+				.minimiasto().modyfikujeNaslonecznieni(7)	.kosztUstawienia(2)
+				.minimiasto().modyfikujeNaslonecznieni(3)	.kosztUstawienia(3)
+				.minimiasto().modyfikujeNaslonecznieni(5)	.kosztUstawienia(1)
+				.minimiasto().modyfikujeNaslonecznieni(-5)	.kosztUstawienia(1)
+				.minimiasto().modyfikujeNaslonecznieni(-7)	.kosztUstawienia(3)				
+				
+				.build(), 2}
 		});
 	}
 }

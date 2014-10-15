@@ -24,7 +24,7 @@ public class HabitatResolverPesimisticTest {
 	@Test(expected = DepresjaException.class)
 	public void nieUdaSieRozmiescicLusterDepresja() throws DepresjaException {
 		//given habitat
-		HabitatResolver serviceUnderTest = new HabitatResolver();
+		HabitatResolver serviceUnderTest = new DefaultHabitatResolver();
 		
 		//when
 		serviceUnderTest.wyliczKosztOptymalnegoUstawieniaLuster(habitat);
